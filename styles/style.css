@@ -244,3 +244,276 @@ footer p {
 .btn-reset {
     background-color: #dc3545;
 }
+
+/* Flexbox lab page styles (scoped to index body class) */
+body.flexbox-lab-page {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f7;
+    color: #273043;
+    margin: 0;
+    padding: 0;
+}
+
+body.flexbox-lab-page * {
+    box-sizing: border-box;
+}
+
+.flexbox-lab-page .wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: min(1100px, 96vw);
+    margin: 0 auto;
+    padding: 1vh;
+    gap: 1vh;
+    background: transparent;
+    border: 0;
+}
+
+.flexbox-lab-page .panel {
+    background: #ffffff;
+    border: 1px solid #d9deea;
+    border-radius: 12px;
+    padding: 1.2vh 1.2vw;
+    overflow: hidden;
+}
+
+.flexbox-lab-page .navbar {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 1.2vh 1.5vw;
+    border-bottom: 1px solid #e4e8f3;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+}
+
+.flexbox-lab-page .logo {
+    font-size: clamp(1rem, 2.5vh, 1.6rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.flexbox-lab-page .menu {
+    display: flex;
+    list-style: none;
+    gap: 1.1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.flexbox-lab-page .menu a {
+    text-decoration: none;
+    color: #44506a;
+    font-size: clamp(0.8rem, 1.8vh, 1rem);
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.flexbox-lab-page .menu a:hover {
+    border-radius: 8px;
+    background-color: #eef2fb;
+    color: #2e3a56;
+}
+
+.flexbox-lab-page .menu a.active {
+    background-color: #e8eefc;
+    color: #2f4f93;
+    font-weight: 600;
+}
+
+.flexbox-lab-page .hero {
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1vw;
+}
+
+.flexbox-lab-page .hero-text,
+.flexbox-lab-page .hero-media {
+    flex: 1;
+    border: 1px dashed #c9d1e6;
+    border-radius: 10px;
+    background: #f8f9fd;
+    padding: 1.2vh 1vw;
+}
+
+.flexbox-lab-page .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1vh;
+}
+
+.flexbox-lab-page .hero-text h1 {
+    font-size: clamp(1rem, 3vh, 1.8rem);
+}
+
+.flexbox-lab-page .hero-text p {
+    color: #55607a;
+    line-height: 1.4;
+    font-size: clamp(0.8rem, 1.8vh, 1rem);
+}
+
+.flexbox-lab-page .btn {
+    border: none;
+    border-radius: 4px;
+    padding: 0.7vh 1.2vw;
+    color: #fff;
+    background: linear-gradient(135deg, #5f86d9, #456fca);
+    font-size: clamp(0.75rem, 1.6vh, 0.9rem);
+    cursor: pointer;
+}
+
+.flexbox-lab-page .hero-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7f8ba5;
+    font-weight: 600;
+    text-align: center;
+}
+
+.flexbox-lab-page .cards {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexbox-lab-page .cards h2 {
+    margin-top: 0.9vh;
+    font-size: clamp(1rem, 2.5vh, 1.5rem);
+}
+
+.flexbox-lab-page .card-grid {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.8vh 0.8vw;
+    align-content: flex-start;
+}
+
+.flexbox-lab-page .card {
+    flex: 1 1 0;
+    min-width: 0;
+    border: 1px solid #d8dff0;
+    border-radius: 10px;
+    padding: 1vh 0.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 0.6vh;
+    background: #fbfcff;
+}
+
+.flexbox-lab-page .card h3 {
+    font-size: clamp(0.8rem, 1.8vh, 1rem);
+    margin: 0;
+}
+
+.flexbox-lab-page .card p {
+    color: #64708a;
+    font-size: clamp(0.7rem, 1.6vh, 0.85rem);
+    margin: 0;
+}
+
+.flexbox-lab-page .card .btn {
+    margin-top: auto;
+}
+
+.flexbox-lab-page .grow {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexbox-lab-page .grow h2 {
+    margin-top: 0.9vh;
+    font-size: clamp(0.9rem, 2.3vh, 1.3rem);
+}
+
+.flexbox-lab-page .grow-row {
+    flex: 1;
+    display: flex;
+    gap: 0.8vw;
+    align-items: stretch;
+}
+
+.flexbox-lab-page .grow-box {
+    border-radius: 10px;
+    border: 1px solid #d8dff0;
+    padding: 1vh 0.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.flexbox-lab-page .grow-1 {
+    flex-grow: 1;
+    background: #eaf2ff;
+}
+
+.flexbox-lab-page .grow-2 {
+    flex-grow: 2;
+    background: #edf8e7;
+}
+
+.flexbox-lab-page .grow-3 {
+    flex-grow: 1;
+    background: #fff2e6;
+}
+
+.flexbox-lab-page .footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6b768d;
+    font-size: clamp(0.8rem, 1.8vh, 1rem);
+    border-top: 1px solid #d9deea;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #fafbff 0%, #f4f6fc 100%);
+}
+
+.flexbox-lab-page .footer p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .flexbox-lab-page .hero {
+        flex-direction: column;
+    }
+
+    .flexbox-lab-page .card-grid {
+        flex-wrap: wrap;
+    }
+
+    .flexbox-lab-page .card {
+        flex-basis: calc(50% - 0.8vw);
+    }
+}
+
+@media (max-width: 600px) {
+    .flexbox-lab-page .wrapper {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .flexbox-lab-page .menu {
+        gap: 0.6rem;
+    }
+
+    .flexbox-lab-page .card {
+        flex-basis: 100%;
+    }
+}
